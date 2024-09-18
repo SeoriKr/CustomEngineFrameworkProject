@@ -3,6 +3,9 @@
 
 #include "framework.h"
 #include "Editor_Window_SB.h"
+#include "..\\SBEngine_Source\sbApplication.h"
+
+//#pragma comment (lib, "..\\x64\\Debug\\SBEngine.lib")
 
 #define MAX_LOADSTRING 100
 
@@ -42,6 +45,32 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 
+    while (true)
+    {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) 
+        {
+            if (msg.message == WM_QUIT)
+            {
+                break;
+            }
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+
+        else
+        {
+            // 메시지가 없는 경우
+            // 게임 로직이 들어가면 됨
+        }
+    }
+
+
+
+
     // 기본 메시지 루프입니다:
     while (GetMessage(&msg, nullptr, 0, 0))
     {
@@ -74,8 +103,8 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_EDITORWINDOWSB));
-    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW); // 커서 모양
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1); 
     wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_EDITORWINDOWSB);
     wcex.lpszClassName  = szWindowClass;
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
