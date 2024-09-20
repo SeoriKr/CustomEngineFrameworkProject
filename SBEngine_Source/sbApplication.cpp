@@ -1,4 +1,5 @@
 #include "sbApplication.h"
+#include "sbInput.h"
 
 namespace sb
 {
@@ -21,6 +22,8 @@ namespace sb
 		mHdc = GetDC(hwnd);
 
 		mPlayer.SetPosition(0, 0);
+
+		Input::Initialize();
 	}
 
 	void Application::Run()
@@ -32,10 +35,9 @@ namespace sb
 
 	void Application::Update()
 	{
-		mSpeed += 0.01f;
+		Input::Update();
 
 		mPlayer.Update();
-
 	}
 
 	void Application::LateUpdate()
