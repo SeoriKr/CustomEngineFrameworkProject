@@ -14,6 +14,8 @@ HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
+sb::Application application;
+
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
@@ -63,8 +65,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
         else
         {
-            // 메시지가 없는 경우
-            // 게임 로직이 들어가면 됨
+            application.Run();
         }
     }
 
@@ -128,6 +129,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+
+   application.Initialize(hWnd);
 
    if (!hWnd)
    {
