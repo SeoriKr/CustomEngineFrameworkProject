@@ -1,5 +1,6 @@
 #include "sbApplication.h"
 #include "sbInput.h"
+#include "sbTime.h"
 
 namespace sb
 {
@@ -24,6 +25,7 @@ namespace sb
 		mPlayer.SetPosition(0, 0);
 
 		Input::Initialize();
+		Time::Initialize();
 	}
 
 	void Application::Run()
@@ -36,6 +38,7 @@ namespace sb
 	void Application::Update()
 	{
 		Input::Update();
+		Time::Update();
 
 		mPlayer.Update();
 	}
@@ -58,6 +61,8 @@ namespace sb
 		int x = mPlayer.GetPositionX();
 		int y = mPlayer.GetPositionY();
 		Rectangle(mHdc, 100 + x, 100 + y, 200 + x, 200 + y);
+		
+		Time::Render(mHdc);
 
 		mPlayer.Render(mHdc);
 	}

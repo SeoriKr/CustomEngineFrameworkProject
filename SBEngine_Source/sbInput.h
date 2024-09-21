@@ -16,6 +16,7 @@ namespace sb
 		Q, W, E, R, T, Y, U, I, O, P,
 		A, S, D, F, G, H, J, K, L,
 		Z, X, C, V, B, N, M,
+		Left, Right, Down, Up,
 		End,
 	};
 
@@ -32,11 +33,13 @@ namespace sb
 		static void Initialize();
 		static void Update();
 
-		static bool GetKeyDown(eKeyCode keycode) { return mKeys[(UINT)keycode].state == eKeyState::Down; };
-		static bool GetKeyUp(eKeyCode keycode) { return mKeys[(UINT)keycode].state == eKeyState::Up; };
-		static bool GetKey(eKeyCode keycode) { return mKeys[(UINT)keycode].state == eKeyState::Pressed; };
+		static bool GetKeyDown(eKeyCode keycode) { return Keys[(UINT)keycode].state == eKeyState::Down; };
+		static bool GetKeyUp(eKeyCode keycode) { return Keys[(UINT)keycode].state == eKeyState::Up; };
+		static bool GetKey(eKeyCode keycode) { return Keys[(UINT)keycode].state == eKeyState::Pressed; };
 
 	private:
-		static std::vector<Key> mKeys;
+		static std::vector<Key> Keys;
+
+		static void createKeys();
 	};
 }
