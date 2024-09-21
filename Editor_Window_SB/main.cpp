@@ -4,6 +4,7 @@
 #include "framework.h"
 #include "Editor_Window_SB.h"
 #include "..\\SBEngine_Source\sbApplication.h"
+#include "..\\SBEngine\sbLoadScenes.h"
 
 //#pragma comment (lib, "..\\x64\\Debug\\SBEngine.lib")
 
@@ -142,6 +143,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   sb::
 
    return TRUE;
 }

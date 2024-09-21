@@ -1,6 +1,7 @@
 #include "sbApplication.h"
 #include "sbInput.h"
 #include "sbTime.h"
+#include "sbSceneManager.h"
 
 namespace sb
 {
@@ -41,10 +42,10 @@ namespace sb
 		HBITMAP oldBitmap = (HBITMAP)SelectObject(mBackHdc, mBackBitmap);
 		DeleteObject(oldBitmap);
 
-		mPlayer.SetPosition(0, 0);
-
 		Input::Initialize();
 		Time::Initialize();
+
+		SceneManager::Initialize();
 	}
 
 	void Application::Run()
@@ -59,7 +60,7 @@ namespace sb
 		Input::Update();
 		Time::Update();
 
-		mPlayer.Update();
+		SceneManager::Update();
 	}
 
 	void Application::LateUpdate()
@@ -68,28 +69,21 @@ namespace sb
 
 	void Application::Render()
 	{
-		//HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
-		//
-		//HBRUSH oldBrush = (HBRUSH)SelectObject(mHdc, blueBrush);
-		//
-		//HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
-		//HPEN oldPen = (HPEN)SelectObject(mHdc, redPen);
-		//
-		//SelectObject(mHdc, oldPen);
-		//
-		//int x = mPlayer.GetPositionX();
-		//int y = mPlayer.GetPositionY();
-		//Rectangle(mHdc, 100 + x, 100 + y, 200 + x, 200 + y);
-		
-		Rectangle(mBackHdc, 0, 0, 1600, 900);
+		clearRenderTarget();
 
 		Time::Render(mBackHdc);
+		SceneManager::Render(mBackHdc);
 
-		mPlayer.Render(mBackHdc);
-
-		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);
-
+		copyRenderTarget(mBackHdc, mHdc);
 	}
 
+	void Application::clearRenderTarget()
+	{
+		Rectangle(mBackHdc, -1, -1, 1601, 901);
+	}
 
+	void Application::copyRenderTarget(HDC source, HDC dest)
+	{
+		BitBlt(dest, 0, 0, mWidth, mHeight, source, 0, 0, SRCCOPY);
+	}
 }

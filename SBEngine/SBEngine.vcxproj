@@ -144,6 +144,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="sbLoadScenes.h" />
+    <ClInclude Include="sbPlayScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sbPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
