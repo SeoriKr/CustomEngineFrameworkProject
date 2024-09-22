@@ -21,6 +21,7 @@
     <ClInclude Include="sbTitleScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="sbLoadResources.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sbPlayScene.cpp">

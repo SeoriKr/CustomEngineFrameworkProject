@@ -9,4 +9,12 @@ namespace sb::enums
 		Player,
 		Max = 16,
 	};
+
+	enum class eResourceType
+	{
+		Texture,
+		Audioclip,
+		Prefab,
+		End,
+	};
 }

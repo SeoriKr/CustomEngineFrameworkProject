@@ -7,6 +7,8 @@
 #include "sbTitleScene.h"
 #include "sbSceneManager.h"
 #include "sbObject.h"
+#include "sbTexture.h"
+#include "sbResources.h"
 
 namespace sb
 {
@@ -23,22 +25,14 @@ namespace sb
 	void PlayScene::Initialize()
 	{
 		{
-			//bg = new Player();
-			//Transform* tr = bg->AddComponent<Transform>();
-			//tr->SetPosition(Vector2(0, 0));
-			//
-			//tr->SetName(L"TR");
-			//
-			//SpriteRenderer* sr
-			//	= bg->AddComponent<SpriteRenderer>();
-			//sr->SetName(L"SR");
-			//sr->ImageLoad(L"E:\\AR50\\YamYam_Engine\\Resources\\CloudOcean.png");
-			//
-			//AddGameObject(bg, eLayerType::Background);
-
-			bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
+			bg = object::Instantiate<Player>(enums::eLayerType::Background/* Vector2(100.0f, 100.0f)*/);
 			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
-			sr->ImageLoad(L"E:\\imagetest\\003.png");
+
+			graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"BG");
+			sr->SetTexture(bgTexture);
+
+			//graphics::Texture* tex = new graphics::Texture();
+			//tex->Load(L"E:\\imagetest\\003.png");
 		}
 	}
 

@@ -13,7 +13,9 @@ namespace sb
 
 		void Update();
 		void LateUpdate();
-		void Render();
+		void Render(); 
+
+		HDC GetHdc() { return mHdc; }
 
 	private:
 		void clearRenderTarget();

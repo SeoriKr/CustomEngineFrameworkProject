@@ -1,6 +1,7 @@
 #pragma once
 #include "sbEntity.h"
 #include "sbComponent.h"
+#include "sbTexture.h"
 		  
 namespace sb
 {
@@ -14,12 +15,11 @@ namespace sb
 		void LateUpdate()  override;
 		void Render(HDC hdc)  override;
 
-		void ImageLoad(const std::wstring& path);
+		void SetTexture(graphics::Texture* texture) { mTexture = texture; }
+		void SetSize(math::Vector2 scale) { mSize = scale; }
 
 	private:
-		Gdiplus::Image* mImage;
-		UINT mWidth;
-		UINT mHeight;
+		graphics::Texture* mTexture;
+		math::Vector2 mSize;
 	};
 }
-

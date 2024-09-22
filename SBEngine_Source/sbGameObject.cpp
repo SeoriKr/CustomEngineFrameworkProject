@@ -49,8 +49,6 @@ namespace sb
 		{
 			comp->Render(hdc);
 		}
-
-
 	}
 
 	void GameObject::initializeTransform()

@@ -3,8 +3,10 @@
 
 #include "framework.h"
 #include "Editor_Window_SB.h"
-#include "..\\SBEngine_Source\sbApplication.h"
-#include "..\\SBEngine\sbLoadScenes.h"
+
+#include "..\\SBEngine_Source\\sbApplication.h"
+#include "..\\SBEngine\\sbLoadScenes.h"
+#include "..\\SBEngine\\sbLoadResources.h"
 
 //#pragma comment (lib, "..\\x64\\Debug\\SBEngine.lib")
 
@@ -152,6 +154,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    Gdiplus::GdiplusStartup(&gpToken, &gpsi, NULL);
 
+   sb::LoadResources();
    sb::LoadScenes();
 
    return TRUE;
