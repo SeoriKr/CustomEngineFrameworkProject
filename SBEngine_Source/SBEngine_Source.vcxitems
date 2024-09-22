@@ -18,8 +18,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)sbApplication.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbEnums.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbScene.h" />
@@ -34,6 +36,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)sbEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbScene.cpp" />

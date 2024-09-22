@@ -26,23 +26,23 @@ namespace sb
 
 	void Time::Render(HDC hdc)
 	{
-		static float time = 0.0f;
-
-		time += DeltaTimeValue;
-
-		float fps = 1.0f / DeltaTimeValue;
-
-		wchar_t strTime[50] = L"";
-		wchar_t strFps[50] = L"";
-
-		swprintf_s(strTime, 50, L"Time : %f", time);
-		swprintf_s(strFps, 50, L"Time : %f", fps);
-
-		int lenTime = wcsnlen_s(strTime, 50);
-		int lenFps = wcsnlen_s(strFps, 50);
-
-		TextOut(hdc, 0, 0, strTime, lenTime);
-		TextOut(hdc, 0, 20, strFps, lenFps);
+		//static float time = 0.0f;
+		//
+		//time += DeltaTimeValue;
+		//
+		//float fps = 1.0f / DeltaTimeValue;
+		//
+		//wchar_t strTime[50] = L"";
+		//wchar_t strFps[50] = L"";
+		//
+		//swprintf_s(strTime, 50, L"Time : %f", time);
+		//swprintf_s(strFps, 50, L"Time : %f", fps);
+		//
+		//int lenTime = wcsnlen_s(strTime, 50);
+		//int lenFps = wcsnlen_s(strFps, 50);
+		//
+		//TextOut(hdc, 0, 0, strTime, lenTime);
+		//TextOut(hdc, 0, 20, strFps, lenFps);
 	}
 
 }

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbEntity.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbMath.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbTransform.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbGameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbInput.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbTime.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbSceneManager.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbLayer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbEntity.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbMath.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbTransform.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbGameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbInput.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbTime.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbSceneManager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbEnums.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbLayer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c55c77c3-f5db-4992-a04e-692c1dc49be7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{9d6387ab-87ab-483f-a11e-eb4b5c3437ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{afa21c05-1f0e-46f0-8393-6c87e03b5bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{0ac20cfe-b695-4949-9fde-0877e2b29336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High Level Interface">
+      <UniqueIdentifier>{bd41e2d9-3583-47b4-a1b5-a03cd7d7e102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{ade9d125-925c-4fec-aeab-6569c7fcff9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{ee806399-b20a-4460-b536-974aa7936ed6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

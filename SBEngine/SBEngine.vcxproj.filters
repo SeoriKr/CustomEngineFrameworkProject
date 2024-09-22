@@ -4,6 +4,9 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{24742f65-3c74-4016-9a5a-5f3734c5082d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Contents">
+      <UniqueIdentifier>{0adbeca7-ee38-4591-9e26-59cabcbc5ba5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sbLoadScenes.h">
@@ -12,12 +15,22 @@
     <ClInclude Include="sbPlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="sbPlayer.h" />
+    <ClInclude Include="sbPlayer.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="sbTitleScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sbPlayScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="sbPlayer.cpp" />
+    <ClCompile Include="sbPlayer.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="sbTitleScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

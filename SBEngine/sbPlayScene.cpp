@@ -3,6 +3,9 @@
 #include "sbPlayer.h"
 #include "sbTransform.h"
 #include "sbSpriteRenderer.h"
+#include "sbInput.h"
+#include "sbTitleScene.h"
+#include "sbSceneManager.h"
 
 namespace sb
 {
@@ -19,9 +22,8 @@ namespace sb
 	void PlayScene::Initialize()
 	{
 		{
-			Player* bg = new Player();
-			Transform* tr
-				= bg->AddComponent<Transform>();
+			bg = new Player();
+			Transform* tr = bg->AddComponent<Transform>();
 			tr->SetPos(Vector2(0, 0));
 
 			tr->SetName(L"TR");
@@ -31,7 +33,7 @@ namespace sb
 			sr->SetName(L"SR");
 			sr->ImageLoad(L"E:\\AR50\\YamYam_Engine\\Resources\\CloudOcean.png");
 
-			AddGameObject(bg);
+			AddGameObject(bg, eLayerType::Background);
 		}
 	}
 
@@ -43,10 +45,28 @@ namespace sb
 	void PlayScene::LateUpdate()
 	{
 		Scene::LateUpdate();
+
+		if (Input::GetKeyDown(eKeyCode::N))
+		{
+			SceneManager::LoadScene(L"TitleScene");
+		}
 	}
 
 	void PlayScene::Render(HDC hdc)
 	{
 		Scene::Render(hdc);
+
+		wchar_t str[50] = L"Play1 Scene";
+		TextOut(hdc, 0, 0, str, 10);
+	}
+	void PlayScene::OnEnter()
+	{
+
+	}
+
+	void PlayScene::OnExit()
+	{
+		Transform* tr = bg->AddComponent<Transform>();
+		tr->SetPos(Vector2(0, 0));
 	}
 }
