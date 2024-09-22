@@ -2,6 +2,9 @@
 
 namespace sb
 {
+	std::map<std::wstring, Scene*> SceneManager::mScene = {};
+	Scene* SceneManager::mActiveScene = nullptr;
+
 	void SceneManager::Initialize()
 	{
 

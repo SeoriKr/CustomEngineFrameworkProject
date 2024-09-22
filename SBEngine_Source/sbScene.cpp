@@ -41,4 +41,9 @@ namespace sb
         }
 
     }
+
+    void Scene::AddGameObject(GameObject* gameObject)
+    {
+        mGameObjects.push_back(gameObject);
+    }
 }

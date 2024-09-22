@@ -45,19 +45,24 @@ namespace sb
 
 	void GameObject::Render(HDC hdc)
 	{
-		HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
+		HBRUSH blueBrush = CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255));
 		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
 		
-		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
+		HPEN redPen = CreatePen(PS_SOLID, 2, RGB(rand() % 255, rand() % 255, rand() % 255));
 		HPEN oldPen = (HPEN)SelectObject(hdc, redPen);
 		
 		SelectObject(hdc, oldPen);
 
-		Rectangle(hdc, 100 + mX, 100 + mY, 200 + mX, 200 + mY);
+		Ellipse(hdc, mX, mY, 200 + mX, 200 + mY);
 
 		SelectObject(hdc, oldBrush);
 		DeleteObject(blueBrush);
 		DeleteObject(redPen);
+	}
+	void GameObject::SetPosition(float x, float y)
+	{
+		mX = x;
+		mY = y;
 	}
 }
 

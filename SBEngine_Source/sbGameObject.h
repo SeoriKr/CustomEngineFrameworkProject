@@ -13,11 +13,7 @@ namespace sb
 		void LateUpdate();
 		void Render(HDC hdc);
 
-		void SetPosition(float x, float y)
-		{
-			mX = x;
-			mY = y;
-		}
+		void SetPosition(float x, float y);
 
 		float GetPositionX() { return mX; }
 		float GetPositionY() { return mY; }

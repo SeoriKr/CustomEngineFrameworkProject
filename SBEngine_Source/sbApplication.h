@@ -28,12 +28,7 @@ namespace sb
 
 		UINT mWidth;
 		UINT mHeight;
-
-		GameObject mPlayer;
-
-		//std::vector<GameObject*> mGameObjects;
-		std::vector<Scene*> mScenes;
-
+		//std::vector<Scene*> mScenes;
 
 	};
 }
