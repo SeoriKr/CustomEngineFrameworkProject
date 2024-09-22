@@ -7,6 +7,7 @@ namespace sb
 {
 	GameObject::GameObject()
 	{
+		mComponents.resize((UINT)enums::eComponentType::End);
 		initializeTransform();
 	}
 
@@ -23,6 +24,11 @@ namespace sb
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
+
 			comp->Initialize();
 		}
 	}
@@ -31,6 +37,11 @@ namespace sb
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
+
 			comp->Update();
 		}
 	}
@@ -39,6 +50,11 @@ namespace sb
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
+
 			comp->LateUpdate();
 		}
 	}
@@ -47,6 +63,11 @@ namespace sb
 	{
 		for (Component* comp : mComponents)
 		{
+			if (comp == nullptr)
+			{
+				continue;
+			}
+
 			comp->Render(hdc);
 		}
 	}

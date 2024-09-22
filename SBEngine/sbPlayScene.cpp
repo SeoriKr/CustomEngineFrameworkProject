@@ -9,6 +9,7 @@
 #include "sbObject.h"
 #include "sbTexture.h"
 #include "sbResources.h"
+#include "sbPlayerScript.h"
 
 namespace sb
 {
@@ -27,6 +28,8 @@ namespace sb
 		{
 			bg = object::Instantiate<Player>(enums::eLayerType::Background/* Vector2(100.0f, 100.0f)*/);
 			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+
+			bg->AddComponent<PlayerScript>();
 
 			graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"BG");
 			sr->SetTexture(bgTexture);

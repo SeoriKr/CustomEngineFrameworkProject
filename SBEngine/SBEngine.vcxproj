@@ -147,11 +147,13 @@
     <ClInclude Include="sbLoadResources.h" />
     <ClInclude Include="sbLoadScenes.h" />
     <ClInclude Include="sbPlayer.h" />
+    <ClInclude Include="sbPlayerScript.h" />
     <ClInclude Include="sbPlayScene.h" />
     <ClInclude Include="sbTitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sbPlayer.cpp" />
+    <ClCompile Include="sbPlayerScript.cpp" />
     <ClCompile Include="sbPlayScene.cpp" />
     <ClCompile Include="sbTitleScene.cpp" />
   </ItemGroup>

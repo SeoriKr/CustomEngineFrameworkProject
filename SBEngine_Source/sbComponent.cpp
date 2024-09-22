@@ -1,25 +1,30 @@
 #include "sbComponent.h"
 
-sb::Component::Component()
+namespace sb
 {
-}
+	Component::Component(enums::eComponentType type)
+		: mType(type)
+	{
+	}
 
-sb::Component::~Component()
-{
-}
+	Component::~Component()
+	{
+	}
 
-void sb::Component::Initialize()
-{
-}
+	void Component::Initialize()
+	{
+	}
 
-void sb::Component::Update()
-{
-}
+	void Component::Update()
+	{
+	}
 
-void sb::Component::LateUpdate()
-{
-}
+	void Component::LateUpdate()
+	{
+	}
 
-void sb::Component::Render(HDC hdc)
-{
+	void Component::Render(HDC hdc)
+	{
+	}
+	
 }

@@ -44,6 +44,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)sbTexture.cpp">
       <Filter>Resource\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbScript.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbApplication.h" />
@@ -97,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbTexture.h">
       <Filter>Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbScript.h">
+      <Filter>Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
