@@ -6,6 +6,7 @@
 #include "sbInput.h"
 #include "sbTitleScene.h"
 #include "sbSceneManager.h"
+#include "sbObject.h"
 
 namespace sb
 {
@@ -22,18 +23,22 @@ namespace sb
 	void PlayScene::Initialize()
 	{
 		{
-			bg = new Player();
-			Transform* tr = bg->AddComponent<Transform>();
-			tr->SetPos(Vector2(0, 0));
+			//bg = new Player();
+			//Transform* tr = bg->AddComponent<Transform>();
+			//tr->SetPosition(Vector2(0, 0));
+			//
+			//tr->SetName(L"TR");
+			//
+			//SpriteRenderer* sr
+			//	= bg->AddComponent<SpriteRenderer>();
+			//sr->SetName(L"SR");
+			//sr->ImageLoad(L"E:\\AR50\\YamYam_Engine\\Resources\\CloudOcean.png");
+			//
+			//AddGameObject(bg, eLayerType::Background);
 
-			tr->SetName(L"TR");
-
-			SpriteRenderer* sr
-				= bg->AddComponent<SpriteRenderer>();
-			sr->SetName(L"SR");
-			sr->ImageLoad(L"E:\\AR50\\YamYam_Engine\\Resources\\CloudOcean.png");
-
-			AddGameObject(bg, eLayerType::Background);
+			bg = object::Instantiate<Player>(enums::eLayerType::Background, Vector2(100.0f, 100.0f));
+			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+			sr->ImageLoad(L"E:\\imagetest\\003.png");
 		}
 	}
 
@@ -56,7 +61,7 @@ namespace sb
 	{
 		Scene::Render(hdc);
 
-		wchar_t str[50] = L"Play1 Scene";
+		wchar_t str[50] = L"Play Scene";
 		TextOut(hdc, 0, 0, str, 10);
 	}
 	void PlayScene::OnEnter()
@@ -66,7 +71,7 @@ namespace sb
 
 	void PlayScene::OnExit()
 	{
-		Transform* tr = bg->AddComponent<Transform>();
-		tr->SetPos(Vector2(0, 0));
+		//Transform* tr = bg->AddComponent<Transform>();
+		//tr->SetPosition(Vector2(0, 0));
 	}
 }

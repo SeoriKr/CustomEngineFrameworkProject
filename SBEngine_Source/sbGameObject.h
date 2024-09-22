@@ -41,6 +41,9 @@ namespace sb
 		}
 
 	private:
+		void initializeTransform();
+
+	private:
 		std::vector<Component*> mComponents;
 	};
 }

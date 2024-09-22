@@ -1,6 +1,6 @@
 #pragma once
 
-namespace sb
+namespace sb::enums
 {
 	enum class eLayerType
 	{

@@ -23,7 +23,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)sbInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbSceneManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.h" />
@@ -39,6 +41,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)sbLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbSceneManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.cpp" />

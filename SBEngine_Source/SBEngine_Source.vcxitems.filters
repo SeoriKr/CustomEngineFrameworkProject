@@ -36,6 +36,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)sbLayer.cpp">
       <Filter>Layer</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbResources.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbApplication.h" />
@@ -79,6 +80,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)sbLayer.h">
       <Filter>Layer</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbResources.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">

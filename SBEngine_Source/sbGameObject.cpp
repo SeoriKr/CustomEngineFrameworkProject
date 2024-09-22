@@ -1,12 +1,13 @@
 #include "sbGameObject.h"
 #include "sbInput.h"
 #include "sbTime.h"
+#include "sbTransform.h"
 
 namespace sb
 {
 	GameObject::GameObject()
 	{
-
+		initializeTransform();
 	}
 
 	GameObject::~GameObject()
@@ -50,6 +51,11 @@ namespace sb
 		}
 
 
+	}
+
+	void GameObject::initializeTransform()
+	{
+		AddComponent<Transform>();
 	}
 }
 
