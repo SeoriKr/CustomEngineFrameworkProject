@@ -145,9 +145,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="sbLoadScenes.h" />
+    <ClInclude Include="sbPlayer.h" />
     <ClInclude Include="sbPlayScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="sbPlayer.cpp" />
     <ClCompile Include="sbPlayScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -12,10 +12,12 @@
     <ClInclude Include="sbPlayScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="sbPlayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sbPlayScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="sbPlayer.cpp" />
   </ItemGroup>
 </Project>
