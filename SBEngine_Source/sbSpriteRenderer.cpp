@@ -2,6 +2,7 @@
 #include "sbGameObject.h"
 #include "sbTransform.h"
 #include "sbTexture.h"
+#include "sbRenderer.h"
 
 namespace sb
 {
@@ -37,6 +38,7 @@ namespace sb
 
 		Transform* tr = GetOwner()->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
+		pos = renderer::mainCamera->CalcPosition(pos);
 
 		if (mTexture->GetTextureType() == graphics::Texture::eTextureType::Bmp)
 		{

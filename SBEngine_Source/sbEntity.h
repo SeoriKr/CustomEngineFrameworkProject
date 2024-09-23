@@ -1,6 +1,8 @@
 #pragma once
 #include "CommonInclude.h"
 
+using namespace sb::math;
+
 namespace sb
 {
 	class Entity

@@ -11,12 +11,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)sbComponent.cpp">
       <Filter>Component</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)sbTransform.cpp">
-      <Filter>Component</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)sbGameObject.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
@@ -45,7 +39,25 @@
       <Filter>Resource\Texture</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)sbScript.cpp">
-      <Filter>Component</Filter>
+      <Filter>Component\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbTransform.cpp">
+      <Filter>Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.cpp">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbCamera.cpp">
+      <Filter>Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbAnimation.cpp">
+      <Filter>Resource\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbAnimator.cpp">
+      <Filter>Resource\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -60,12 +72,6 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbComponent.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.h">
-      <Filter>Component</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)sbTransform.h">
       <Filter>Component</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbGameObject.h">
@@ -102,7 +108,25 @@
       <Filter>Resource\Texture</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)sbScript.h">
-      <Filter>Component</Filter>
+      <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbTransform.h">
+      <Filter>Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbSpriteRenderer.h">
+      <Filter>Component\SpriteRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbCamera.h">
+      <Filter>Component\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbAnimation.h">
+      <Filter>Resource\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbAnimator.h">
+      <Filter>Resource\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +156,24 @@
     </Filter>
     <Filter Include="Resource\Texture">
       <UniqueIdentifier>{083b5265-3c2e-4456-9b70-80da258a5587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script">
+      <UniqueIdentifier>{34d6e172-acae-41ea-b9b2-0a71d0f2db5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Transform">
+      <UniqueIdentifier>{d7fa297e-a2e3-4fd7-ab5d-2862e89e426d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\SpriteRenderer">
+      <UniqueIdentifier>{e26380ec-ede1-40fd-bcbe-7d61b2032ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Camera">
+      <UniqueIdentifier>{509bdafc-a7b8-46c2-a850-81f1ff2cc2bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{cca418ec-898c-4ddd-a28f-0104f79e806d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Animation">
+      <UniqueIdentifier>{9561baa9-2d65-47ff-80a7-4aeea48dfa81}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

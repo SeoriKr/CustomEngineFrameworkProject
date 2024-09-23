@@ -10,6 +10,7 @@ namespace sb
 	public:
 		SpriteRenderer();
 		~SpriteRenderer();
+
 		void Initialize() override;
 		void Update()  override;
 		void LateUpdate()  override;

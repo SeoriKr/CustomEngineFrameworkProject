@@ -6,7 +6,9 @@ namespace sb::enums
 	{
 		Transform,
 		SpriteRenderer,
+		Animator,
 		Script,
+		Camera,
 		End,
 	};
 
@@ -22,6 +24,7 @@ namespace sb::enums
 	{
 		Texture,
 		Audioclip,
+		Animation,
 		Prefab,
 		End,
 	};

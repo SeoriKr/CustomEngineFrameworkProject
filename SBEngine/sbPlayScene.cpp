@@ -10,6 +10,9 @@
 #include "sbTexture.h"
 #include "sbResources.h"
 #include "sbPlayerScript.h"
+#include "sbCamera.h"
+#include "sbRenderer.h"
+#include "sbAnimator.h"
 
 namespace sb
 {
@@ -25,18 +28,31 @@ namespace sb
 
 	void PlayScene::Initialize()
 	{
-		{
-			bg = object::Instantiate<Player>(enums::eLayerType::Background/* Vector2(100.0f, 100.0f)*/);
-			SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+		GameObject* camera = object::Instantiate<GameObject>(enums::eLayerType::None);
+		Camera* cameraComp = camera->AddComponent<Camera>();
+		renderer::mainCamera = cameraComp;
 
-			bg->AddComponent<PlayerScript>();
 
-			graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"BG");
-			sr->SetTexture(bgTexture);
+		camera->AddComponent<PlayerScript>();
 
-			//graphics::Texture* tex = new graphics::Texture();
-			//tex->Load(L"E:\\imagetest\\003.png");
-		}
+		bg = object::Instantiate<Player>(enums::eLayerType::Background/* Vector2(100.0f, 100.0f)*/);
+		//SpriteRenderer* sr = bg->AddComponent<SpriteRenderer>();
+
+		bg->AddComponent<PlayerScript>();
+
+		graphics::Texture* bgTexture = Resources::Find<graphics::Texture>(L"BG");
+		Animator* animator = bg->AddComponent<Animator>();
+		animator->CreateAnimation(L"CatFrontMove", bgTexture, Vector2(0.0f, 0.0f), Vector2(32.0f, 32.0f), Vector2::Zero, 4, 0.1f);
+		
+		animator->PlayAnimation(L"CatFrontMove", true);
+		
+		
+		
+		//sr->SetTexture(bgTexture);
+
+		//graphics::Texture* tex = new graphics::Texture();
+		//tex->Load(L"E:\\imagetest\\003.png");
+		
 	}
 
 	void PlayScene::Update()

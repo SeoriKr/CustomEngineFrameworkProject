@@ -15,7 +15,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbAnimation.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbAnimator.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbCamera.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbEnums.h" />
@@ -24,6 +27,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)sbLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sbRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)sbScene.h" />
@@ -35,13 +39,17 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)sbTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbAnimation.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbAnimator.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbCamera.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)sbRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)sbScene.cpp" />
