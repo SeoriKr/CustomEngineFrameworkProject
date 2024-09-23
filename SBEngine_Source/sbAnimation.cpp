@@ -66,29 +66,68 @@ namespace sb
 		GameObject* gameObj = mAnimator->GetOwner();
 		Transform* tr = gameObj->GetComponent<Transform>();
 		Vector2 pos = tr->GetPosition();
+		float rot = tr->GetRotation();
+		Vector2 scale = tr->GetScale();
 
 		if (renderer::mainCamera)
 		{
 			renderer::mainCamera->CalcPosition(pos);
 		}
 
-		BLENDFUNCTION func = {};
-		func.BlendOp = AC_SRC_OVER;
-		func.BlendFlags = 0;
-		func.AlphaFormat = AC_SRC_ALPHA;
-		func.SourceConstantAlpha = 255;
+		graphics::Texture::eTextureType type = mTexture->GetTextureType();
 
-		Sprite sprite = mAnimationSheet[mIndex];
-		HDC imgHdc = mTexture->GetHdc();
-		
-		AlphaBlend(hdc
-			, pos.x, pos.y
-			, sprite.size.x, sprite.size.y
-			, imgHdc
-			, sprite.leftTop.x, sprite.leftTop.y
-			, sprite.size.x, sprite.size.y
-			, func);
+		if (type == graphics::Texture::eTextureType::Bmp)
+		{
+			BLENDFUNCTION func = {};
+			func.BlendOp = AC_SRC_OVER;
+			func.BlendFlags = 0;
+			func.AlphaFormat = AC_SRC_ALPHA;
+			func.SourceConstantAlpha = 255;
 
+			Sprite sprite = mAnimationSheet[mIndex];
+			HDC imgHdc = mTexture->GetHdc();
+
+			AlphaBlend(hdc
+				, pos.x - (sprite.size.x / 2.0f), pos.y - (sprite.size.y / 2.0f)
+				, sprite.size.x * scale.x
+				, sprite.size.y * scale.y
+				, imgHdc
+				, sprite.leftTop.x, sprite.leftTop.y
+				, sprite.size.x, sprite.size.y
+				, func);
+		}
+
+		else if (type == graphics::Texture::eTextureType::Png)
+		{
+			// 원하는 픽셀 투명화시킬 때 사용
+			Gdiplus::ImageAttributes imgAtt = {};
+
+			imgAtt.SetColorKey(Gdiplus::Color(100, 100, 100), Gdiplus::Color(255, 255, 255));
+
+			Gdiplus::Graphics graphics(hdc);
+
+			graphics.TranslateTransform(pos.x, pos.y);
+			graphics.RotateTransform(rot);
+			graphics.TranslateTransform(-pos.x, -pos.y);
+
+
+			Gdiplus::Graphics graphics(hdc);
+			graphics.DrawImage(
+				Gdiplus::Rect
+				(
+					pos.x - (sprite.size.x / 2.0f)
+					, pos.y - (sprite.size.y / 2.0f)
+					, sprite.size.x
+					, sprite.size.y
+				)
+				, sprite.leftTop.x
+				, sprite.leftTop.y
+				, sprite.size.x
+				, sprite.size.y
+				, Gdiplus::UnitPixel
+				, nullptr
+			);
+		}
 	}
 
 	void Animation::CreateAnimation(const std::wstring& name
